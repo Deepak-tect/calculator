@@ -1,5 +1,5 @@
 ---
-- name: Pull docker image of Calculator from DockerHub
+- name: Pull docker image of Calculator 
   hosts: all
   tasks:
 
