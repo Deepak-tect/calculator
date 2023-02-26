@@ -1,6 +1,6 @@
 ---
 - name: Pull docker image of Calculator from dockerhub
-  hosts: all
+  hosts: dev
   tasks:
 
     - name: Start docker service
