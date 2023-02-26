@@ -3,9 +3,6 @@
   hosts: all
   tasks:
   
-    - name: removing error
-      shell: export LC_ALL=en_IN.UTF-8
-
     - name: Start docker service
       service:
         name: docker
