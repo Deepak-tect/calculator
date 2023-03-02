@@ -1,6 +1,6 @@
 ---
 - name: Pull docker image of Calculator
-  hosts: dev
+  hosts: all
   tasks:
   
     - name: Start docker servicee
