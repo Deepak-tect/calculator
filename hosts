@@ -1,4 +1,4 @@
 [dev]
-node2 ansible_host=172.16.130.123 ansible_user=deepak
+172.16.130.123 ansible_user=deepak
 
 
