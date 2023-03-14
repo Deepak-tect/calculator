@@ -1,4 +1,4 @@
 [dev]
-172.16.130.123 ansible_user=deepak
+localhost ansible_user=deepak
 
 
