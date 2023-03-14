@@ -12,4 +12,4 @@
       shell: docker pull deepak18/calculator
       
     - name: running container
-      shell: docker run -it -d deepak18/calculator
+      shell: docker run -it -d --name cal deepak18/calculator
