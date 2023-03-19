@@ -18,15 +18,15 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         double number1, number2;
         do {
-<<<<<<< HEAD
+
             System.out.println("Scientific Calculator... \n Choose operation:");
             System.out.print("1. Factorial\n2. Square root\n3. Natural Log\n" +
                     "4. Exit\nEnter your choice: ");
-=======
+
             System.out.println("Scientific Calculator.... \n Choose operation:");
             System.out.print("1. Factorial\n2. Square root\n" +
                     "3. Exit\nEnter your choice: ");
->>>>>>> origin/master
+
             int choice;
             try {
                 choice = scanner.nextInt();
