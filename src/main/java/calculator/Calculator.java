@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
 
+
     public Calculator() {
     }
 
@@ -18,8 +19,8 @@ public class Calculator {
         double number1, number2;
         do {
             System.out.println("Scientific Calculator... \n Choose operation:");
-            System.out.print("1. Factorial\n2. Square root\n" +
-                    "3. Exit\nEnter your choice: ");
+            System.out.print("1. Factorial\n2. Square root\n3. Natural Log\n" +
+                    "4. Exit\nEnter your choice: ");
             int choice;
             try {
                 choice = scanner.nextInt();
@@ -29,19 +30,44 @@ public class Calculator {
 
             switch (choice) {
                 case 1:
-                    // Factorial
                     System.out.print("Enter a number : ");
-                    number1 = scanner.nextDouble();
+                    try {
+                        number1 = scanner.nextDouble();
+                    } catch (InputMismatchException error) {
+                        System.out.println("Invalid input entered.. Please enter number");
+                        logger.info("Invalid Input! Closing Application");
+                        return;
+                    }
                     System.out.println("Factorial of " + number1 + " is : " + calculator.factorial(number1));
                     System.out.println("\n");
 
                     break;
+
                 case 2:
-                    // Square root
+
                     System.out.print("Enter a number : ");
-                    number1 = scanner.nextDouble();
+                    try {
+                        number1 = scanner.nextDouble();
+                    } catch (InputMismatchException error) {
+                        System.out.println("Invalid input entered.. Please enter number");
+                        logger.info("Invalid Input! Closing Application");
+                        return;
+                    }
                     System.out.println("Square root of " + number1 + " is : " + calculator.squareRoot(number1));
                     System.out.println("\n");
+                    break;
+
+                case 3:
+                    System.out.print("Enter number: ");
+                    try {
+                        number1 = scanner.nextDouble();
+                    } catch (InputMismatchException error) {
+                        System.out.println("Invalid input entered.. Please enter number");
+                        logger.info("Invalid Input! Closing Application");
+                        return;
+                    }
+                    System.out.println("Natural Log " + number1 + " is : " + calculator.naturalLog_Function(number1));
+                    ;
                     break;
                 default:
                     System.out.println("Exiting....");
@@ -59,14 +85,19 @@ public class Calculator {
     }
 
     public double fact(double num) {
-        double facto = 1;
+        double ans = 1;
         for (int i = 1; i <= num; ++i) {
-            facto *= i;
+            ans *= i;
         }
-        return facto;
+        return ans;
     }
 
-
+    public static double naturalLog_Function(double number1){
+        logger.info("[NATURAL LOG] - " + number1);
+        double ans = Math.log(number1);
+        logger.info("[RESULT - NATURAL LOG] - "+ ans);
+        return ans;
+    }
     public double squareRoot(double number1) {
         logger.info("[SQ ROOT] - " + number1);
         double result = Math.sqrt(number1);

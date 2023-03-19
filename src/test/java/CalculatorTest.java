@@ -40,4 +40,16 @@ public class CalculatorTest {
         assertNotEquals("Finding square root for False Positive", 2, calculator.squareRoot(36), DELTA);
 
     }
+
+    @Test
+    public void logTruePositive(){
+        assertEquals("Finding natural log for True Positive", 0, calculator.naturalLog_Function(1), DELTA);
+
+    }
+
+    @Test
+    public void logFalsePositive(){
+        assertNotEquals("Finding natural log for False Positive", 60, calculator.naturalLog_Function(2.4), DELTA);
+        assertNotEquals("Finding natural log for False Positive", 4.7, calculator.naturalLog_Function(2.1), DELTA);
+    }
 }
