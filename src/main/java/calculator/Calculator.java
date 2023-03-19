@@ -20,12 +20,8 @@ public class Calculator {
         do {
 
             System.out.println("Scientific Calculator... \n Choose operation:");
-            System.out.print("1. Factorial\n2. Square root\n3. Natural Log\n" +
-                    "4. Exit\nEnter your choice: ");
-
-            System.out.println("Scientific Calculator.... \n Choose operation:");
-            System.out.print("1. Factorial\n2. Square root\n" +
-                    "3. Exit\nEnter your choice: ");
+            System.out.print("1. Factorial\n2. Square root\n3. Natural Log\n4. Power\n" +
+                    "5. Exit\nEnter your choice: ");
 
             int choice;
             try {
@@ -73,8 +69,24 @@ public class Calculator {
                         return;
                     }
                     System.out.println("Natural Log " + number1 + " is : " + calculator.naturalLog_Function(number1));
-                    ;
+                    System.out.println("\n");
                     break;
+                case 4:
+                    System.out.print("Enter the number : ");
+                    try {
+                        number1 = scanner.nextDouble();
+                    } catch (InputMismatchException error) {
+                        System.out.println("Invalid input entered.. Please enter number");
+                        logger.info("Invalid Input! Closing Application");
+                        return;
+                    }
+
+                    System.out.print("Enter exponent: ");
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " raised to power "+number2+" is : " + calculator.power(number1, number2));
+                    System.out.println("\n");
+                    break;
+
                 default:
                     System.out.println("Exiting....");
                     return;
@@ -96,6 +108,12 @@ public class Calculator {
             ans *= i;
         }
         return ans;
+    }
+    public double power(double number1, double number2) {
+        logger.info("[POWER - " + number1 + " RAISED TO] " + number2);
+        double result = Math.pow(number1,number2);
+        logger.info("[RESULT - POWER] - " + result);
+        return result;
     }
 
     public static double naturalLog_Function(double number1){
