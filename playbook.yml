@@ -1,9 +1,9 @@
 ---
-- name: Pull docker image of Calculator from dockerhub
+- name: Pull docker image of Calculator
   hosts: all
   tasks:
-
-    - name: Start docker service
+  
+    - name: Start docker servicee
       service:
         name: docker
         state: started
