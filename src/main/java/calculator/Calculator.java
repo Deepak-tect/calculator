@@ -19,7 +19,7 @@ public class Calculator {
         double number1, number2;
         do {
 
-            System.out.println("Scientific Calculator.... \n Choose operation:");
+            System.out.println("Scientific Calculator... \n Choose operation:");
             System.out.print("1. Factorial\n2. Square root\n3. Natural Log\n4. Power\n" +
                     "5. Exit\nEnter your choice: ");
 
