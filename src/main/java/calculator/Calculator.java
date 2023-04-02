@@ -19,7 +19,7 @@ public class Calculator {
         double number1, number2;
         do {
 
-            System.out.println("Scientific Calculator... \n Choose operation:");
+            System.out.println("Scientific Calculator.... \n Choose operation:");
             System.out.print("1. Factorial\n2. Square root\n3. Natural Log\n4. Power\n" +
                     "5. Exit\nEnter your choice: ");
 
@@ -96,9 +96,11 @@ public class Calculator {
     }
 
     public double factorial(double number1) {
-        logger.info("[FACTORIAL] - " + number1);
+        logger.info("Factorial calculation");
+//        logger.info("[FACTORIAL] - " + number1);
+
         double result = fact(number1);
-        logger.info("[RESULT - FACTORIAL] - " + result);
+//        logger.info("[RESULT - FACTORIAL] - " + result);
         return result;
     }
 
@@ -110,22 +112,25 @@ public class Calculator {
         return ans;
     }
     public double power(double number1, double number2) {
-        logger.info("[POWER - " + number1 + " RAISED TO] " + number2);
+        logger.info("Power calculation");
+//        logger.info("[POWER - " + number1 + " RAISED TO] " + number2);
         double result = Math.pow(number1,number2);
-        logger.info("[RESULT - POWER] - " + result);
+//        logger.info("[RESULT - POWER] - " + result);
         return result;
     }
 
     public static double naturalLog_Function(double number1){
-        logger.info("[NATURAL LOG] - " + number1);
+        logger.info("NaturalLog calculation");
+//        logger.info("[NATURAL LOG] - " + number1);
         double ans = Math.log(number1);
-        logger.info("[RESULT - NATURAL LOG] - "+ ans);
+//        logger.info("[RESULT - NATURAL LOG] - "+ ans);
         return ans;
     }
     public double squareRoot(double number1) {
-        logger.info("[SQ ROOT] - " + number1);
+//        logger.info("[SQ ROOT] - " + number1);
+        logger.info("SquareRoot calculation");
         double result = Math.sqrt(number1);
-        logger.info("[RESULT - SQ ROOT] - " + result);
+//        logger.info("[RESULT - SQ ROOT] - " + result);
         return result;
     }
 }
